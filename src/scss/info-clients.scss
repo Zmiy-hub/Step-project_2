@@ -1,0 +1,131 @@
+@use "./variables" as *;
+
+.info-clients__main-text{
+  font-size: 212px;
+  color: $ui-color-black;
+  line-height: 100%;
+  font-weight: 300;
+  font-family: "Gilroy", sans-serif;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  @media screen and (max-width:$ui-breakpoint-lg) {
+    font-size: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media screen and (max-width:$ui-breakpoint-sm) {
+    font-size: 80px;
+  }
+}
+
+.info-clients__wrapper{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
+  @media screen and (max-width:$ui-breakpoint-lg) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.info-clients__box{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid $ui-color-black;
+  padding: 30px 50px;
+  gap: 30px;
+
+  &:nth-child(1){
+    border-left: none;
+    border-top: none;
+    border-right: none;
+  }
+
+    &:nth-child(2) {
+      border-top: none;
+    }
+
+    &:nth-child(3) {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+    }
+
+    &:nth-child(4) {
+      border-bottom: none;
+      border-left: none;
+      border-top: none;
+    }
+
+    &:nth-child(5) {
+      border-bottom: none;
+      border-left: none;
+      border-top: none;
+    }
+
+    &:nth-child(6) {
+      border-bottom: none;
+      border-left: none;
+      border-top: none;
+      border-right: none;
+    }
+    @media screen and (max-width:$ui-breakpoint-lg) {
+      
+      &:nth-child(2) {
+          border-left: none;
+          border-right: none;
+        }
+
+      &:nth-child(4) {
+          border-bottom: 1px solid $ui-color-black;
+          border-right: none;
+        }
+      &:nth-child(5) {
+          border-right: none;
+          border-bottom: 1px solid $ui-color-black;
+        }
+    }
+}
+.info-clients__box-first--main-text{
+  font-size: 40px;
+  line-height: 1.1;
+  color:#333333;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 800;
+}
+.info-clients__box-first--text{
+  font-family: $ui-font-inter;
+  font-weight: 400;
+  color:#000;
+  font-size: 20px;
+  line-height: 1.5;
+
+}
+.name{
+  font-family: $ui-font-inter;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  color: #000;
+}
+.occupation{
+  font-family: $ui-font-inter;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  color: #000;
+}
+.info-clients__box-first--wrapper-info{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.names{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

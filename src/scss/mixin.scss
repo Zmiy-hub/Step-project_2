@@ -1,0 +1,19 @@
+@mixin ui-default-font($fz: 20px, $lh: 28px, $fw: 400, $clr: rgba(0, 0, 0, 1)) {
+  font-family: "Inter", sans-serif;
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: $fw;
+}
+
+@mixin ui-second-font(
+  $fz: 62px,
+  $lh: 100%,
+  $fw: 300,
+  $clr: rgba(37, 37, 37, 1)
+) {
+  font-family: "Gilroy", sans-serif;
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: $fw;
+  color: $clr;
+}

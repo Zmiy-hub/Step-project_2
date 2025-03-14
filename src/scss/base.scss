@@ -1,0 +1,37 @@
+@use "variables" as *;
+@use "mixin" as *;
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f3ea;
+  @include ui-default-font($fz: 20px, $lh: 28px, $fw: 400, $clr: #0001);
+}
+
+.container {
+  max-width: 1780px;
+  margin: 0 auto;
+  padding: 0 70px;
+
+  @media screen and (max-width: $ui-breakpoint-lg) {
+    max-width: 768px;
+    padding: 0 30px;
+  }
+
+  @media screen and (max-width: $ui-breakpoint-md) {
+    max-width: 576px;
+  }
+
+  @media screen and (max-width: $ui-breakpoint-sm) {
+    max-width: 100%;
+  }
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}

@@ -1,0 +1,91 @@
+@use "./variables" as *;
+
+.contacting{
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media screen and (max-width:$ui-breakpoint-lg) {
+    padding-top: 30px;
+  }
+}
+
+.contacting__content{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @media screen and (max-width:$ui-breakpoint-lg) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contacting__text{
+  font-size: 155px;
+  font-weight: 300;
+  line-height: 100%;
+  color: #333333;
+  font-family: "Gilroy", sans-serif;
+
+  @media screen and (max-width:$ui-breakpoint-lg) {
+    font-size: 150px;
+  }
+
+  @media screen and (max-width:$ui-breakpoint-sm) {
+    font-size: 80px;
+  }
+}
+
+.contacting__info{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media screen and (max-width:$ui-breakpoint-lg) {
+    align-items: center;
+    gap: 40px;
+  }
+}
+.contacting__text-other{
+  font-family: "Gilroy-Bold";
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 100%;
+  color: $ui-color-black;
+
+  @media screen and (max-width:$ui-breakpoint-sm) {
+    font-size: 50px;  
+  }
+}
+.contacting__quastion{
+  font-weight: 400;
+  color: $ui-color-black;
+  font-size: 34px;
+  font-family: "Gilroy-Medium";
+  line-height: 100%;
+
+  @media screen and (max-width:$ui-breakpoint-sm) {
+    font-size: 30px;
+  }
+}
+
+.contacting__icon{
+  background-color: $ui-color-black;
+  padding: 16px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 195px;
+
+  &:after{
+    content: "⭢";
+    margin-left: 10px;
+  }
+
+  @media screen and (max-width:$ui-breakpoint-sm) {
+    width: 438px;
+  }
+}

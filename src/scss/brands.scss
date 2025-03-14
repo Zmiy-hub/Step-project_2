@@ -1,0 +1,23 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+.brands {
+  padding: 70px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media screen and (max-width: $ui-breakpoint-xl) {
+      gap: 20px;
+    }
+  }
+  &__link {
+    background-color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-align: center;
+  }
+}

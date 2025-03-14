@@ -1,0 +1,92 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+.about {
+  border-bottom: 1px solid #252525;
+  padding: 70px 0;
+  @media screen and (max-width: $ui-breakpoint-xl) {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $ui-breakpoint-xl) {
+      flex-wrap: wrap;
+    }
+  }
+  &__dsc--inner {
+    padding: 0 70px;
+    width: 70%;
+    @media screen and (max-width: $ui-breakpoint-xl) {
+      padding: 0 30px;
+      width: 100%;
+    }
+  }
+
+  &__dsc {
+    @include ui-second-font($fz: 37px, $lh: 62px, $fw: 300, $clr: #373737);
+    width: 100%;
+
+    @media screen and (max-width: $ui-breakpoint-xl) {
+      @include ui-second-font($fz: 66px, $lh: 54px, $fw: 300, $clr: #373737);
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    @media screen and (max-width: $ui-breakpoint-md) {
+      @include ui-second-font($fz: 18px, $lh: 30px, $fw: 300, $clr: #373737);
+    }
+  }
+
+  .bold {
+    @include ui-second-font($fz: 37px, $lh: 100%, $fw: 700, $clr: #373737);
+    @media screen and (max-width: $ui-breakpoint-xl) {
+      @include ui-second-font($fz: 66px, $lh: 54px, $fw: 700, $clr: #373737);
+    }
+    @media screen and (max-width: $ui-breakpoint-md) {
+      @include ui-second-font($fz: 18px, $lh: 30px, $fw: 700, $clr: #373737);
+    }
+  }
+
+  &__social {
+    display: inline-block;
+    background-color: #252525;
+    padding: 60px 70px 60px 150px;
+    text-align: right;
+    border-bottom: 1px solid #252525;
+    max-width: 100%;
+
+    @media screen and (max-width: $ui-breakpoint-xl) {
+      width: 100%;
+      padding: 30px;
+      padding-bottom: 0;
+    }
+    @media screen and (max-width: $ui-breakpoint-md) {
+      padding: 30px;
+    }
+
+    .social__title {
+      @include ui-second-font($fz: 32px, $lh: 32px, $fw: 500, $clr: #fff);
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 30px;
+      @media screen and (max-width: $ui-breakpoint-md) {
+        @include ui-second-font($fz: 28px, $lh: 28px, $fw: 500, $clr: #fff);
+      }
+    }
+
+    .social__list {
+      display: flex;
+      gap: 20px;
+      justify-content: right;
+    }
+
+    .social__img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
